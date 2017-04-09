@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewAudio"
+	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White">
+	<ContentView.Content>
+		<ScrollView Orientation="Vertical">
+			<local:AwesomeWrappanel x:Name="theList" Orientation="Horizontal" Spacing="2">
+				<local:AwesomeWrappanel.ItemTemplate>
+					<DataTemplate>
+						<Button WidthRequest="110" Text="{Binding Title}" TextColor="#5AA9D3" CommandParameter="{Binding}" Clicked="ButtonClicked" BorderWidth="1" BorderColor="Black" />
+					</DataTemplate>
+				</local:AwesomeWrappanel.ItemTemplate>
+			</local:AwesomeWrappanel>
+		</ScrollView>		
+	</ContentView.Content>
+</ContentView>

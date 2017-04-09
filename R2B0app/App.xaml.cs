@@ -7,7 +7,7 @@ namespace R2B0app
 		public App ()
 		{
 			InitializeComponent ();
-
+			Global.Init ();
 			MainPage = new R2B0appPage ();
 		}
 

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewSettings"
+	xmlns:local="clr-namespace:R2B0app" BindingContext="{local:ForBinding}">
+	<ContentView.Content>
+		<ScrollView Orientation="Vertical" Margin="0" Padding="0">
+			<StackLayout Orientation="Vertical" Spacing="0" Margin="0" Padding="12,0,12,0" HorizontalOptions="FillAndExpand">
+				<local:UcTitle Text="Audio" Icon="{x:Static local:FAIcon.Music}" />
+				<StackLayout Orientation="Horizontal" Margin="0,0,0,6" Padding="0" HorizontalOptions="FillAndExpand">
+					<Label Text="{Binding Volume,StringFormat='Volume ({0})'}" VerticalTextAlignment="Center"/>
+					<Button x:Name="btStopAudio" BorderWidth="1" BorderRadius="10" Text=" Stop " HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeDown}" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+					<Slider Minimum="0" Maximum="80" Value="{Binding Volume}" HorizontalOptions="FillAndExpand"/>
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeUp}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+					<Stepper Minimum="0" Maximum="80" Value="{Binding Volume}" Increment="1" HorizontalOptions="End"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeOff}" VerticalTextAlignment="Center"/>
+					<Label Text="Mute" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding UnMute}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<local:UcTitle Text="Bruitages" Icon="{x:Static local:FAIcon.Bullhorn}" Margin="0,12,0,12" />
+				<Label Text="{Binding FrequenceBruitage,StringFormat='Fréquence ({0})'}" Margin="0,0,0,12"/>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.HourglassStart}" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+					<Slider Minimum="0" Maximum="255" Value="{Binding FrequenceBruitage}" HorizontalOptions="FillAndExpand"/>
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.HourglassEnd}" VerticalTextAlignment="Center" HorizontalOptions="End"/>
+					<Stepper Minimum="0" Maximum="255" Value="{Binding FrequenceBruitage}" Increment="1" HorizontalOptions="End"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.HourglassEmpty}" VerticalTextAlignment="Center"/>
+					<Label Text="Bruitage aléatoire activé" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding RandomBruitage}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentView.Content>
+</ContentView>

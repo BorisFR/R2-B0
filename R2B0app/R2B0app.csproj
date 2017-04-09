@@ -30,6 +30,21 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="R2B0appPage.xaml" />
+    <EmbeddedResource Include="ViewMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSettings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UcTitle.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAudio.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewAudioIcon.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -39,6 +54,31 @@
       <DependentUpon>R2B0appPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Component\AwesomeWrappanel.cs" />
+    <Compile Include="ViewMenu.xaml.cs">
+      <DependentUpon>ViewMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSettings.xaml.cs">
+      <DependentUpon>ViewSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TestObj.cs" />
+    <Compile Include="Model\TestObjManager.cs" />
+    <Compile Include="Code\Global.cs" />
+    <Compile Include="Code\ForBinding.cs" />
+    <Compile Include="UserControl\UcTitle.xaml.cs">
+      <DependentUpon>UcTitle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Code\Communication.cs" />
+    <Compile Include="Code\Enum.cs" />
+    <Compile Include="Component\FontAwesomeIcon.cs" />
+    <Compile Include="ViewAudio.xaml.cs">
+      <DependentUpon>ViewAudio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AudioObj.cs" />
+    <Compile Include="ViewAudioIcon.xaml.cs">
+      <DependentUpon>ViewAudioIcon.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -50,9 +90,21 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.224\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Component\" />
+    <Folder Include="Model\" />
+    <Folder Include="Code\" />
+    <Folder Include="UserControl\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
