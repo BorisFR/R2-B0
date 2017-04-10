@@ -6,6 +6,8 @@ namespace R2B0app
 {
 	public partial class ViewAudioIcon : ContentView
 	{
+		private Screen display;
+
 		public ViewAudioIcon ()
 		{
 			InitializeComponent ();
@@ -15,6 +17,7 @@ namespace R2B0app
 		public ViewAudioIcon (Screen display)
 		{
 			InitializeComponent ();
+			this.display = display;
 			switch (display) {
 			case Screen.StarWars:
 				theList.ItemsSource = Global.StarWarsSounds;
@@ -32,7 +35,17 @@ namespace R2B0app
 		{
 			Button button = sender as Button;
 			AudioObj param = (AudioObj)button.CommandParameter;
-			Communication.SendCommand (R2Command.PlayR2Sound, param.IdAudio);
+			switch (display) {
+			case Screen.StarWars:
+				Communication.SendCommand (R2Command.PlayStarWarsSound, param.IdAudio, param.IdBank);
+				break;
+			case Screen.SeriesTV:
+				Communication.SendCommand (R2Command.PlaySerieSound, param.IdAudio, param.IdBank);
+				break;
+			default:
+				Communication.SendCommand (R2Command.PlayR2Sound, param.IdAudio);
+				break;
+			}
 		}
 
 	}

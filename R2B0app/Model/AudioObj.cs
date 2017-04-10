@@ -16,10 +16,14 @@ namespace R2B0app
 		private int idAudio;
 		public int IdAudio { get { return idAudio; } set { if (idAudio == value) return; idAudio = value; OnPropertyChanged ("IdAudio"); } }
 
+		private int idBank;
+		public int IdBank { get { return idBank; } set { if (idBank == value) return; idBank = value; OnPropertyChanged ("IdBank"); } }
+
 		public AudioObj () { }
 		public AudioObj (string title, string icon) { Title = title; Icon = icon; }
 		public AudioObj (string title, int idAudio) { Title = title; IdAudio = idAudio; }
 		public AudioObj (string title, string icon, int idAudio) { Title = title; Icon = icon; IdAudio = idAudio; }
+		public AudioObj (string title, string icon, int idAudio, int idBank) { Title = title; Icon = icon; IdAudio = idAudio; IdBank = idBank; }
 
 		protected virtual void OnPropertyChanged (string propertyName)
 		{

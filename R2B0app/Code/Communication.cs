@@ -40,14 +40,16 @@ namespace R2B0app
 			}
 		}
 
-		public static void SendCommand (R2Command command, int var)
+		public static void SendCommand (R2Command command, int var, int var2 = 0)
 		{
 			string action = string.Empty;
 			string p1 = "0";
 			string p2 = "0";
 			switch (command) {
-			case R2Command.AudioMute:
+			case R2Command.AudioMuteOn:
 				action = "S"; p2 = "4"; break;
+			case R2Command.AudioMuteOff:
+				action = "S"; p2 = "5"; break;
 			case R2Command.AudioStop:
 				action = "S"; break;
 			case R2Command.VolumeDown:
@@ -67,11 +69,12 @@ namespace R2B0app
 			case R2Command.PlayR2Sound:
 				action = "A"; p2 = var.ToString (); break;
 			case R2Command.PlayStarWarsSound:
-				action = "A"; p2 = var.ToString (); break;
+				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 			case R2Command.PlayMusicSound:
 				action = "A"; p2 = var.ToString (); break;
 			case R2Command.PlaySerieSound:
-				action = "A"; p2 = var.ToString (); break;
+				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
+
 
 			}
 			SendCommand ($"command?action={action}&p1={p1}&p2={p2}");

@@ -5,7 +5,8 @@ namespace R2B0app
 
 	public enum R2Command
 	{
-		AudioMute,
+		AudioMuteOn,
+		AudioMuteOff,
 		VolumeUp,
 		VolumeDown,
 		VolumeSet,

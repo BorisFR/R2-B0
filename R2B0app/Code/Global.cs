@@ -59,11 +59,40 @@ namespace R2B0app
 			R2sounds.Add (new AudioObj ("Shortcut", 70));
 			R2sounds.Add (new AudioObj ("Start", 180));
 
-			StarWarsSounds.Add (new AudioObj ("Marche", FAIcon.Empire, 71));
-			StarWarsSounds.Add (new AudioObj ("Cantina", FAIcon.Rebel, 72));
-			StarWarsSounds.Add (new AudioObj ("Leia", FAIcon.Rebel, 73));
+			StarWarsSounds.Add (new AudioObj ("Star Wars", FAIcon.Empire, 5, 50));
+			StarWarsSounds.Add (new AudioObj ("Marche", FAIcon.Empire, 5, 51));
+			StarWarsSounds.Add (new AudioObj ("Battle of the Heroes", FAIcon.Empire, 5, 52));
+			StarWarsSounds.Add (new AudioObj ("Cantina", FAIcon.Rebel, 5, 53));
+			StarWarsSounds.Add (new AudioObj ("Leia", FAIcon.Rebel, 9, 97));
 
-			SeriesSounds.Add (new AudioObj ("Invaders", FAIcon.Music, 72));
+			SeriesSounds.Add (new AudioObj ("Austin Powers", FAIcon.Music, 6, 0));
+			SeriesSounds.Add (new AudioObj ("Back to the future", FAIcon.Music, 6, 1));
+			SeriesSounds.Add (new AudioObj ("Back to the future III", FAIcon.Music, 6, 2));
+			SeriesSounds.Add (new AudioObj ("Battlestar Galactica", FAIcon.Music, 6, 3));
+			SeriesSounds.Add (new AudioObj ("Doctor Who", FAIcon.Music, 6, 27));
+			SeriesSounds.Add (new AudioObj ("Fringe", FAIcon.Music, 6, 4));
+			SeriesSounds.Add (new AudioObj ("Game of Thrones", FAIcon.Music, 6, 5));
+			SeriesSounds.Add (new AudioObj ("Ghostbusters", FAIcon.Music, 6, 6));
+			SeriesSounds.Add (new AudioObj ("Ghostbusters", FAIcon.Music, 6, 7));
+			SeriesSounds.Add (new AudioObj ("Logan's Run", FAIcon.Music, 6, 8));
+			SeriesSounds.Add (new AudioObj ("Six Million Dollar Man", FAIcon.Music, 6, 9));
+			SeriesSounds.Add (new AudioObj ("Space 1999", FAIcon.Music, 6, 10));
+			SeriesSounds.Add (new AudioObj ("Star Trek", FAIcon.Music, 6, 11));
+			SeriesSounds.Add (new AudioObj ("Star Trek Voyager", FAIcon.Music, 6, 12));
+			SeriesSounds.Add (new AudioObj ("Stargate", FAIcon.Music, 6, 24));
+			SeriesSounds.Add (new AudioObj ("Stargate SG-1", FAIcon.Music, 6, 25));
+			SeriesSounds.Add (new AudioObj ("Stargate Atlantis", FAIcon.Music, 6, 26));
+			SeriesSounds.Add (new AudioObj ("The Invaders", FAIcon.Music, 6, 13));
+			SeriesSounds.Add (new AudioObj ("The Outer Limits", FAIcon.Music, 6, 14));
+			SeriesSounds.Add (new AudioObj ("The Prisoner", FAIcon.Music, 6, 15));
+			SeriesSounds.Add (new AudioObj ("The Terminator", FAIcon.Music, 6, 16));
+			SeriesSounds.Add (new AudioObj ("The Twilight Zone", FAIcon.Music, 6, 17));
+			SeriesSounds.Add (new AudioObj ("The Walking Dead", FAIcon.Music, 6, 18));
+			SeriesSounds.Add (new AudioObj ("The X-FILES", FAIcon.Music, 6, 19));
+			SeriesSounds.Add (new AudioObj ("Thunderbirds", FAIcon.Music, 6, 20));
+			SeriesSounds.Add (new AudioObj ("The Time Tunnel", FAIcon.Music, 6, 21));
+			SeriesSounds.Add (new AudioObj ("Tron Legacy", FAIcon.Music, 6, 22));
+			SeriesSounds.Add (new AudioObj ("V", FAIcon.Music, 6, 23));
 
 			MusiqueSounds.Add (new AudioObj ("Boris", FAIcon.Music, 74));
 		}

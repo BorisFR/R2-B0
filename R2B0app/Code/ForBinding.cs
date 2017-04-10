@@ -43,7 +43,10 @@ namespace R2B0app
 			set {
 				if (Global.Mute == value) return;
 				Global.Mute = value;
-				Communication.SendCommand (R2Command.AudioMute);
+				if (Global.Mute)
+					Communication.SendCommand (R2Command.AudioMuteOn);
+				else
+					Communication.SendCommand (R2Command.AudioMuteOff);
 				OnPropertyChanged ("UnMute");
 			}
 		}
