@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewAudioFilm"
+	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White">
+	<ContentView.Content>
+		<ScrollView Orientation="Vertical">
+			<local:AwesomeWrappanel x:Name="theList" Orientation="Horizontal" Spacing="1">
+				<local:AwesomeWrappanel.ItemTemplate>
+					<DataTemplate>
+						<Grid WidthRequest="96" HeightRequest="141" Padding="0" RowSpacing="0" ColumnSpacing="0">
+					        <Grid.ColumnDefinitions>
+					            <ColumnDefinition Width="96"/>
+					        </Grid.ColumnDefinitions>
+					        <Grid.RowDefinitions>
+					            <RowDefinition Height="121"/>
+					            <RowDefinition Height="20"/>
+					        </Grid.RowDefinitions>
+
+							<BoxView BackgroundColor="#74B9D6" Grid.Row="1" />
+							<Label Text="{Binding Title}" FontSize="10" TextColor="#236BFE" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" />
+							<Image Source="{Binding Picture}" WidthRequest="96" HeightRequest="121" Aspect="AspectFit" />
+							<Button Text="" BackgroundColor="Transparent" CommandParameter="{Binding}" BorderColor="Transparent" BorderWidth="0" Grid.RowSpan="2" Clicked="ButtonClicked" />
+						</Grid>
+					</DataTemplate>
+				</local:AwesomeWrappanel.ItemTemplate>
+			</local:AwesomeWrappanel>
+		</ScrollView>			
+	</ContentView.Content>
+</ContentView>

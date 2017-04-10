@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Xamarin.Forms;
 
 namespace R2B0app
 {
@@ -18,6 +19,19 @@ namespace R2B0app
 
 		private int idBank;
 		public int IdBank { get { return idBank; } set { if (idBank == value) return; idBank = value; OnPropertyChanged ("IdBank"); } }
+
+		public ImageSource Picture {
+			get {
+				try {
+					var imageSource = ImageSource.FromResource ($"R2B0app.Images.{icon}.png");
+					return imageSource;
+				} catch (Exception err) {
+					System.Diagnostics.Debug.WriteLine ("********** ERROR: " + err.Message);
+				}
+				return null;
+
+			}
+		}
 
 		public AudioObj () { }
 		public AudioObj (string title, string icon) { Title = title; Icon = icon; }

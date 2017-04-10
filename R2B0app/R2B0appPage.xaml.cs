@@ -27,10 +27,10 @@ namespace R2B0app
 				viewRight.Content = new ViewAudioIcon (obj.Display);
 				break;
 			case Screen.SeriesTV:
-				viewRight.Content = new ViewAudioIcon (obj.Display);
+				viewRight.Content = new ViewAudioFilm (obj.Display);
 				break;
 			case Screen.Musique:
-				viewRight.Content = new ViewAudioIcon (obj.Display);
+				viewRight.Content = new ViewAudioCD (obj.Display);
 				break;
 			}
 		}

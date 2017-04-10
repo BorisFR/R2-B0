@@ -3,9 +3,9 @@
 	xmlns:local="clr-namespace:R2B0app">
 	<ContentView.Content>
 		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
-			<local:FontAwesomeIcon x:Name="theIcon" Text="" TextColor="#5AA9D3" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
-			<Label x:Name="theText" TextColor="#5AA9D3" LineBreakMode="NoWrap" VerticalTextAlignment="Center" Margin="0"/>
-			<BoxView Margin="0" HeightRequest="2" BackgroundColor="#5AA9D3" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
+			<local:FontAwesomeIcon x:Name="theIcon" Text="" TextColor="#236BFD" VerticalTextAlignment="Center" HorizontalOptions="Start"/>
+			<Label x:Name="theText" TextColor="#236BFD" LineBreakMode="NoWrap" VerticalTextAlignment="Center" Margin="0"/>
+			<BoxView Margin="0" HeightRequest="2" BackgroundColor="#236BFD" VerticalOptions="Center" HorizontalOptions="FillAndExpand"/>
 		</StackLayout>
 	</ContentView.Content>
 </ContentView>

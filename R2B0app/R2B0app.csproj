@@ -45,6 +45,46 @@
     <EmbeddedResource Include="ViewAudioIcon.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Images\AustinPowers.png" />
+    <EmbeddedResource Include="ViewAudioFilm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\BackToTheFuture.png" />
+    <EmbeddedResource Include="Images\BackToTheFutureIII.png" />
+    <EmbeddedResource Include="Images\Fringe.png" />
+    <EmbeddedResource Include="Images\GameOfThrones.png" />
+    <EmbeddedResource Include="Images\Ghostbusters.png" />
+    <EmbeddedResource Include="Images\GhostbustersMagic.png" />
+    <EmbeddedResource Include="Images\LogansRun.png" />
+    <EmbeddedResource Include="Images\SixMillionDollarMan.png" />
+    <EmbeddedResource Include="Images\Space1999.png" />
+    <EmbeddedResource Include="Images\Stargate.png" />
+    <EmbeddedResource Include="Images\StarTrek.png" />
+    <EmbeddedResource Include="Images\StarTrekVoyager.png" />
+    <EmbeddedResource Include="Images\TheInvaders.png" />
+    <EmbeddedResource Include="Images\TheOuterLimits.png" />
+    <EmbeddedResource Include="Images\ThePrisoner.png" />
+    <EmbeddedResource Include="Images\TheTerminator.png" />
+    <EmbeddedResource Include="Images\TheTimeTunnel.png" />
+    <EmbeddedResource Include="Images\TheTwilightZone.png" />
+    <EmbeddedResource Include="Images\TheWalkingDead.png" />
+    <EmbeddedResource Include="Images\TheXFiles.png" />
+    <EmbeddedResource Include="Images\Thunderbirds.png" />
+    <EmbeddedResource Include="Images\TronLegacy.png" />
+    <EmbeddedResource Include="Images\V.png" />
+    <EmbeddedResource Include="Images\DoctorWho.png" />
+    <EmbeddedResource Include="Images\BattlestarGalactica.png" />
+    <EmbeddedResource Include="Images\StargateSG1.png" />
+    <EmbeddedResource Include="Images\StargateAtlantis.png" />
+    <EmbeddedResource Include="ViewAudioCD.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images\cd_boris.png" />
+    <EmbeddedResource Include="Images\cd_bennybenassi.png" />
+    <EmbeddedResource Include="Images\cd_royalgigolos.png" />
+    <EmbeddedResource Include="Images\cd_bombthebass.png" />
+    <EmbeddedResource Include="Images\cd_bonnietyler.png" />
+    <EmbeddedResource Include="Images\cd_cproject.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -79,6 +119,13 @@
     <Compile Include="ViewAudioIcon.xaml.cs">
       <DependentUpon>ViewAudioIcon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewAudioFilm.xaml.cs">
+      <DependentUpon>ViewAudioFilm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ImageResourceExtension.cs" />
+    <Compile Include="ViewAudioCD.xaml.cs">
+      <DependentUpon>ViewAudioCD.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -105,6 +152,7 @@
     <Folder Include="Model\" />
     <Folder Include="Code\" />
     <Folder Include="UserControl\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.224\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
