@@ -30,11 +30,11 @@ namespace R2B0app
 
 		public static void Init ()
 		{
-			AllMenu.Add (new TestObj ("Settings", FAIcon.Cogs, Screen.Settings));
 			AllMenu.Add (new TestObj ("R2 sound", FAIcon.Bullhorn, Screen.R2Sound));
-			AllMenu.Add (new TestObj ("Movie", FAIcon.Film, Screen.SeriesTV));
 			AllMenu.Add (new TestObj ("Star Wars", FAIcon.Rebel, Screen.StarWars));
+			AllMenu.Add (new TestObj ("Movie", FAIcon.Film, Screen.SeriesTV));
 			AllMenu.Add (new TestObj ("Music", FAIcon.Music, Screen.Musique));
+			AllMenu.Add (new TestObj ("Settings", FAIcon.Cogs, Screen.Settings));
 
 			R2sounds.Add (new AudioObj ("Alarm (11)", 0));
 			R2sounds.Add (new AudioObj ("Hum (25)", 1));
@@ -59,11 +59,20 @@ namespace R2B0app
 			R2sounds.Add (new AudioObj ("Shortcut", 70));
 			R2sounds.Add (new AudioObj ("Start", 180));
 
-			StarWarsSounds.Add (new AudioObj ("Star Wars", FAIcon.Empire, 5, 50));
+			StarWarsSounds.Add (new AudioObj ("Star Wars Theme", FAIcon.Empire, 5, 50));
 			StarWarsSounds.Add (new AudioObj ("Marche Imperiale", FAIcon.Empire, 5, 51));
 			StarWarsSounds.Add (new AudioObj ("Battle of the Heroes", FAIcon.Empire, 5, 52));
-			StarWarsSounds.Add (new AudioObj ("Cantina", FAIcon.Rebel, 5, 53));
+			StarWarsSounds.Add (new AudioObj ("La Cantina", FAIcon.Rebel, 5, 53));
 			StarWarsSounds.Add (new AudioObj ("Message de Leia", FAIcon.Rebel, 9, 97));
+
+			StarWarsSounds.Add (new AudioObj ("Birthday", FAIcon.Empire, 5, 1));
+			StarWarsSounds.Add (new AudioObj ("Gangnam Style", FAIcon.Empire, 5, 2));
+			StarWarsSounds.Add (new AudioObj ("Harlem Shake", FAIcon.Empire, 5, 3));
+			StarWarsSounds.Add (new AudioObj ("In Love", FAIcon.Empire, 5, 4));
+			StarWarsSounds.Add (new AudioObj ("Macho Man", FAIcon.Empire, 5, 5));
+			StarWarsSounds.Add (new AudioObj ("Mahna Mahna", FAIcon.Empire, 5, 6));
+			StarWarsSounds.Add (new AudioObj ("Peanut Butter Jelly Time", FAIcon.Empire, 5, 7));
+			StarWarsSounds.Add (new AudioObj ("Stayin' Alive", FAIcon.Empire, 5, 8));
 
 			SeriesSounds.Add (new AudioObj ("Austin Powers", "AustinPowers", 6, 0));
 			SeriesSounds.Add (new AudioObj ("Back to the future", "BackToTheFuture", 6, 1));
@@ -94,12 +103,52 @@ namespace R2B0app
 			SeriesSounds.Add (new AudioObj ("Tron Legacy", "TronLegacy", 6, 22));
 			SeriesSounds.Add (new AudioObj ("V", "V", 6, 23));
 
-			MusiqueSounds.Add (new AudioObj ("Benny Benassi", "cd_bennybenassi", 74));
-			MusiqueSounds.Add (new AudioObj ("Bomb the Bass", "cd_bombthebass", 74));
-			MusiqueSounds.Add (new AudioObj ("Bonnie Tyler", "cd_bonnietyler", 74));
-			MusiqueSounds.Add (new AudioObj ("Boris", "cd_boris", 74));
-			MusiqueSounds.Add (new AudioObj ("C. Project", "cd_cproject", 74));
-			MusiqueSounds.Add (new AudioObj ("Royal Gigolos", "cd_royalgigolos", 74));
+			MusiqueSounds.Add (new AudioObj ("Benny Benassi", "cd_bennybenassi", 7, 0));
+			MusiqueSounds.Add (new AudioObj ("Bomb the Bass", "cd_bombthebass", 7, 1));
+			MusiqueSounds.Add (new AudioObj ("Bonnie Tyler", "cd_bonnietyler", 7, 2));
+			MusiqueSounds.Add (new AudioObj ("Boris", "cd_boris", 9, 0)); // 74));
+			MusiqueSounds.Add (new AudioObj ("C. Project", "cd_cproject", 7, 3));
+			MusiqueSounds.Add (new AudioObj ("David Bowie", "cd_boris", 7, 4));
+			MusiqueSounds.Add (new AudioObj ("Depeche Mode", "cd_boris", 7, 5));
+			MusiqueSounds.Add (new AudioObj ("Duke Sauce", "cd_boris", 7, 6));
+			MusiqueSounds.Add (new AudioObj ("Eric B & Rakim", "cd_boris", 7, 7));
+			MusiqueSounds.Add (new AudioObj ("FPI Project", "cd_boris", 7, 8));
+			MusiqueSounds.Add (new AudioObj ("Royal Gigolos", "cd_royalgigolos", 7, 9));
+
+			MusiqueSounds.Add (new AudioObj ("FGTH", "cd_boris", 7, 10));
+			MusiqueSounds.Add (new AudioObj ("Genesis", "cd_boris", 7, 11));
+			MusiqueSounds.Add (new AudioObj ("Grauzone", "cd_boris", 7, 12));
+			MusiqueSounds.Add (new AudioObj ("Herbie Hancock", "cd_boris", 7, 13));
+			MusiqueSounds.Add (new AudioObj ("INXS", "cd_boris", 7, 14));
+			MusiqueSounds.Add (new AudioObj ("Junior Jack", "cd_boris", 7, 15));
+			MusiqueSounds.Add (new AudioObj ("Kid Cudi", "cd_boris", 7, 16));
+			MusiqueSounds.Add (new AudioObj ("Lil Louis", "cd_boris", 7, 17));
+			MusiqueSounds.Add (new AudioObj ("Marilyn Manson", "cd_boris", 7, 18));
+			MusiqueSounds.Add (new AudioObj ("Martin Garrix", "cd_boris", 7, 19));
+			MusiqueSounds.Add (new AudioObj ("Moby", "cd_boris", 7, 20));
+			MusiqueSounds.Add (new AudioObj ("Nirvana", "cd_boris", 7, 21));
+			MusiqueSounds.Add (new AudioObj ("One Phat Deeva", "cd_boris", 7, 22));
+			MusiqueSounds.Add (new AudioObj ("Patrick Coutin", "cd_boris", 7, 23));
+			MusiqueSounds.Add (new AudioObj ("Paul Oakenfold", "cd_boris", 7, 24));
+			MusiqueSounds.Add (new AudioObj ("Prodigy", "cd_boris", 7, 25));
+			MusiqueSounds.Add (new AudioObj ("Push", "cd_boris", 7, 26));
+			MusiqueSounds.Add (new AudioObj ("R3hab & KSHMR", "cd_boris", 7, 27));
+			MusiqueSounds.Add (new AudioObj ("Run DMC", "cd_boris", 7, 28));
+			MusiqueSounds.Add (new AudioObj ("Simple Minds", "cd_boris", 7, 29));
+			MusiqueSounds.Add (new AudioObj ("Soft Cell", "cd_boris", 7, 30));
+			MusiqueSounds.Add (new AudioObj ("Tears For Fears", "cd_boris", 7, 31));
+			MusiqueSounds.Add (new AudioObj ("The Black Eyed Peas", "cd_boris", 7, 32));
+			MusiqueSounds.Add (new AudioObj ("The Cure", "cd_boris", 7, 33));
+			MusiqueSounds.Add (new AudioObj ("The Eagles", "cd_boris", 7, 34));
+			MusiqueSounds.Add (new AudioObj ("The Police", "cd_boris", 7, 35));
+			MusiqueSounds.Add (new AudioObj ("Timmy Trumpet", "cd_boris", 7, 36));
+			MusiqueSounds.Add (new AudioObj ("U2 - New Year's Day", "cd_boris", 7, 37));
+			MusiqueSounds.Add (new AudioObj ("U2 - Sunday Bloody Sunday", "cd_boris", 7, 38));
+			MusiqueSounds.Add (new AudioObj ("U2 - With Or Without You", "cd_boris", 7, 39));
+			MusiqueSounds.Add (new AudioObj ("Underdog Project vs Sunclub - Summer Jam 2003", "cd_boris", 7, 40));
+
+
+
 		}
 
 	}

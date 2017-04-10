@@ -16,6 +16,7 @@ namespace R2B0app
 
 			set {
 				if (Global.Volume == value) return;
+				if (value < 0 || value > 80) return;
 				Global.Volume = value;
 				Communication.SendCommand (R2Command.VolumeSet, Global.Volume);
 				OnPropertyChanged ("Volume");

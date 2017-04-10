@@ -2,33 +2,57 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewMenu"
 	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White">
 	<ContentView.Content>
-		<ScrollView Orientation="Vertical">
-			<local:AwesomeWrappanel x:Name="theList" Orientation="Horizontal" Spacing="1">
-				<local:AwesomeWrappanel.ItemTemplate>
-					<DataTemplate>
-						<Grid WidthRequest="86" HeightRequest="106" Padding="0" RowSpacing="0" ColumnSpacing="0">
-					        <Grid.ColumnDefinitions>
-					            <ColumnDefinition Width="3"/>
-					            <ColumnDefinition Width="80"/>
-					            <ColumnDefinition Width="3"/>
-					        </Grid.ColumnDefinitions>
-					        <Grid.RowDefinitions>
-					            <RowDefinition Height="3"/>
-					            <RowDefinition Height="80"/>
-					            <RowDefinition Height="20"/>
-					            <RowDefinition Height="3"/>
-					        </Grid.RowDefinitions>
+		<StackLayout Orientation="Vertical">
+			<StackLayout Orientation="Horizontal" Margin="6,6,0,0">
+				<Frame x:Name="btStop" Padding="6" WidthRequest="16">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Stop}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</Frame>
+				<Frame x:Name="btPause" Padding="6" WidthRequest="16">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Pause}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</Frame>
+				<Frame x:Name="btPlay" Padding="6" WidthRequest="16">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Play}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</Frame>
+				<Frame x:Name="btVolumeDown" Padding="6" WidthRequest="16">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeDown}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</Frame>
+				<Frame x:Name="btVolumeUp" Padding="6" WidthRequest="16">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeUp}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				</Frame>
+				<!--
+				<Frame Padding="6">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeOff}" VerticalTextAlignment="Center"/>
+				</Frame>
+				<Button x:Name="btStop" Text=" Stop " BorderWidth="1" BorderRadius="10" Clicked="BtStopClicked" />-->
+			</StackLayout>
+			<ScrollView Orientation="Vertical">
+				<local:AwesomeWrappanel x:Name="theList" Orientation="Horizontal" Spacing="1">
+					<local:AwesomeWrappanel.ItemTemplate>
+						<DataTemplate>
+							<Grid WidthRequest="86" HeightRequest="106" Padding="0" RowSpacing="0" ColumnSpacing="0">
+						        <Grid.ColumnDefinitions>
+						            <ColumnDefinition Width="3"/>
+						            <ColumnDefinition Width="80"/>
+						            <ColumnDefinition Width="3"/>
+						        </Grid.ColumnDefinitions>
+						        <Grid.RowDefinitions>
+						            <RowDefinition Height="3"/>
+						            <RowDefinition Height="80"/>
+						            <RowDefinition Height="20"/>
+						            <RowDefinition Height="3"/>
+						        </Grid.RowDefinitions>
 
-							<BoxView BackgroundColor="#7AA6FD" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" />
-							<BoxView BackgroundColor="#E9F0FF" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" />
-							<BoxView BackgroundColor="#DCE6FF" Grid.Row="2" Grid.Column="1" />
-							<Label Text="{Binding Title}" FontSize="17" TextColor="#236BFD" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" />
-							<local:FontAwesomeIcon Text="{Binding Icon}" FontSize="60" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
-							<Button Text="" BackgroundColor="Transparent" CommandParameter="{Binding}" BorderColor="Transparent" BorderWidth="0" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ButtonClicked" />
-						</Grid>
-					</DataTemplate>
-				</local:AwesomeWrappanel.ItemTemplate>
-			</local:AwesomeWrappanel>
-		</ScrollView>
+								<BoxView BackgroundColor="#7AA6FD" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" />
+								<BoxView BackgroundColor="#E9F0FF" Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" />
+								<BoxView BackgroundColor="#DCE6FF" Grid.Row="2" Grid.Column="1" />
+								<Label Text="{Binding Title}" FontSize="17" TextColor="#236BFD" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" />
+								<local:FontAwesomeIcon Text="{Binding Icon}" FontSize="60" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+								<Button Text="" BackgroundColor="Transparent" CommandParameter="{Binding}" BorderColor="Transparent" BorderWidth="0" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" Clicked="ButtonClicked" />
+							</Grid>
+						</DataTemplate>
+					</local:AwesomeWrappanel.ItemTemplate>
+				</local:AwesomeWrappanel>
+			</ScrollView>
+		</StackLayout>
 	</ContentView.Content>
 </ContentView>

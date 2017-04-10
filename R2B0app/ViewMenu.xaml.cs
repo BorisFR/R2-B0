@@ -10,6 +10,35 @@ namespace R2B0app
 		{
 			InitializeComponent ();
 			theList.ItemsSource = Global.AllMenu;
+
+			var tapStop = new TapGestureRecognizer ();
+			tapStop.Tapped += (s, e) => {
+				Communication.SendCommand (R2Command.AudioStop);
+			};
+			btStop.GestureRecognizers.Add (tapStop);
+
+			var tapPause = new TapGestureRecognizer ();
+			tapPause.Tapped += (s, e) => {
+			};
+			btPause.GestureRecognizers.Add (tapPause);
+
+			var tapPlay = new TapGestureRecognizer ();
+			tapPlay.Tapped += (s, e) => {
+			};
+			btPlay.GestureRecognizers.Add (tapPlay);
+
+			var tapVolumeDown = new TapGestureRecognizer ();
+			tapVolumeDown.Tapped += (s, e) => {
+				Global.ForBinding.Volume = Global.ForBinding.Volume - 1;
+			};
+			btVolumeDown.GestureRecognizers.Add (tapVolumeDown);
+
+			var tapVolumeUp = new TapGestureRecognizer ();
+			tapVolumeUp.Tapped += (s, e) => {
+				Global.ForBinding.Volume = Global.ForBinding.Volume + 1;
+			};
+			btVolumeUp.GestureRecognizers.Add (tapVolumeUp);
+
 		}
 
 		void ButtonClicked (object sender, EventArgs e)
@@ -17,6 +46,11 @@ namespace R2B0app
 			Button button = sender as Button;
 			TestObj param = (TestObj)button.CommandParameter;
 			Global.MainPage.ShowPage (param);
+		}
+
+		void BtStopClicked (object sender, System.EventArgs e)
+		{
+			Communication.SendCommand (R2Command.AudioStop);
 		}
 
 	}
