@@ -79,12 +79,48 @@
     <EmbeddedResource Include="ViewAudioCD.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="Images\cd_boris.png" />
-    <EmbeddedResource Include="Images\cd_bennybenassi.png" />
-    <EmbeddedResource Include="Images\cd_royalgigolos.png" />
-    <EmbeddedResource Include="Images\cd_bombthebass.png" />
-    <EmbeddedResource Include="Images\cd_bonnietyler.png" />
-    <EmbeddedResource Include="Images\cd_cproject.png" />
+    <EmbeddedResource Include="Images\cd_beatdis_bombthebass.png" />
+    <EmbeddedResource Include="Images\cd_bennybenassi_californiadreamin.png" />
+    <EmbeddedResource Include="Images\cd_blackeyedpeas_igottafeeling.png" />
+    <EmbeddedResource Include="Images\cd_bonnietyler_totaleclipse.png" />
+    <EmbeddedResource Include="Images\cd_boris_soireedisco.png" />
+    <EmbeddedResource Include="Images\cd_cproject_morning.png" />
+    <EmbeddedResource Include="Images\cd_davidbowie_underpressure.png" />
+    <EmbeddedResource Include="Images\cd_depechemode_justcantgetenough.png" />
+    <EmbeddedResource Include="Images\cd_ducksauce_barbarastreisand.png" />
+    <EmbeddedResource Include="Images\cd_eagles_hotelcalifornia.png" />
+    <EmbeddedResource Include="Images\cd_ericbrakim_paidinfull.png" />
+    <EmbeddedResource Include="Images\cd_fgth_relax.png" />
+    <EmbeddedResource Include="Images\cd_fpiproject_richinparadise.png" />
+    <EmbeddedResource Include="Images\cd_genesis_mama.png" />
+    <EmbeddedResource Include="Images\cd_grauzone_eisbar.png" />
+    <EmbeddedResource Include="Images\cd_herbiehancock_rockit.png" />
+    <EmbeddedResource Include="Images\cd_housenation.png" />
+    <EmbeddedResource Include="Images\cd_inxs_needyoutonight.png" />
+    <EmbeddedResource Include="Images\cd_juniorjack_dahype.png" />
+    <EmbeddedResource Include="Images\cd_kidcudi_pursuitofhappiness.png" />
+    <EmbeddedResource Include="Images\cd_lillouis_frenchkiss.png" />
+    <EmbeddedResource Include="Images\cd_marilynmanson_personaljesus.png" />
+    <EmbeddedResource Include="Images\cd_martingarrix_tsunami.png" />
+    <EmbeddedResource Include="Images\cd_moby_naturalblues.png" />
+    <EmbeddedResource Include="Images\cd_nirvana_smellliketenspirit.png" />
+    <EmbeddedResource Include="Images\cd_onephatdeeva_inandoutofmylife.png" />
+    <EmbeddedResource Include="Images\cd_patrickcoutin_jaimeregarderlesfilles.png" />
+    <EmbeddedResource Include="Images\cd_police_roxanne.png" />
+    <EmbeddedResource Include="Images\cd_prodigy_smackmybitchup.png" />
+    <EmbeddedResource Include="Images\cd_push_universalnation.png" />
+    <EmbeddedResource Include="Images\cd_r3hab_karate.png" />
+    <EmbeddedResource Include="Images\cd_royalgigolos_californiadreamin.png" />
+    <EmbeddedResource Include="Images\cd_rundmc_itslikethat.png" />
+    <EmbeddedResource Include="Images\cd_simpleminds_alivekicking.png" />
+    <EmbeddedResource Include="Images\cd_softcell_taintedlove.png" />
+    <EmbeddedResource Include="Images\cd_tearsforfears_shout.png" />
+    <EmbeddedResource Include="Images\cd_thecure_lullaby.png" />
+    <EmbeddedResource Include="Images\cd_timmytrompet_freaks.png" />
+    <EmbeddedResource Include="Images\cd_u2_bloodysunday.png" />
+    <EmbeddedResource Include="Images\cd_u2_newyearsday.png" />
+    <EmbeddedResource Include="Images\cd_u2_withorwithoutyou.png" />
+    <EmbeddedResource Include="Images\cd_underdogproject_summerjam2003.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
