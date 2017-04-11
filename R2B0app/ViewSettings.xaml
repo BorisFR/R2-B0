@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewSettings"
-	xmlns:local="clr-namespace:R2B0app" BindingContext="{local:ForBinding}">
+	xmlns:local="clr-namespace:R2B0app" BindingContext="{x:Static local:Global.ForBinding}">
 	<ContentView.Content>
 		<ScrollView Orientation="Vertical" Margin="0" Padding="0">
 			<StackLayout Orientation="Vertical" Spacing="0" Margin="0" Padding="12,0,12,0" HorizontalOptions="FillAndExpand">

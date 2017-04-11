@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Plugin.Vibrate;
 using Xamarin.Forms;
+//using Xam.Plugins.Vibrate;
+using Plugin.Vibrate.Abstractions;
 
 namespace R2B0app
 {
@@ -22,6 +25,8 @@ namespace R2B0app
 
 		public static R2B0appPage MainPage;
 
+		public static IVibrate Vibrate;
+
 		public static ObservableCollection<TestObj> AllMenu = new ObservableCollection<TestObj> ();
 		public static ObservableCollection<AudioObj> R2sounds = new ObservableCollection<AudioObj> ();
 		public static ObservableCollection<AudioObj> StarWarsSounds = new ObservableCollection<AudioObj> ();
@@ -30,6 +35,8 @@ namespace R2B0app
 
 		public static void Init ()
 		{
+			Vibrate = CrossVibrate.Current;
+
 			AllMenu.Add (new TestObj ("R2 sound", FAIcon.Bullhorn, Screen.R2Sound));
 			AllMenu.Add (new TestObj ("Star Wars", FAIcon.Rebel, Screen.StarWars));
 			AllMenu.Add (new TestObj ("Movie", FAIcon.Film, Screen.SeriesTV));
