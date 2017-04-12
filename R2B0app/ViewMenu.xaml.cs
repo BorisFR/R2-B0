@@ -13,19 +13,30 @@ namespace R2B0app
 
 			var tapStop = new TapGestureRecognizer ();
 			tapStop.Tapped += (s, e) => {
+				Global.ForBinding.IsStop = true;
 				Communication.SendCommand (R2Command.AudioStop);
 			};
 			btStop.GestureRecognizers.Add (tapStop);
 
 			var tapPause = new TapGestureRecognizer ();
 			tapPause.Tapped += (s, e) => {
+				if (Global.IsStop) return;
+				if (Global.IsPlaying) {
+					Global.ForBinding.IsPlaying = false;
+				} else {
+					Global.ForBinding.IsPlaying = true;
+				}
 			};
 			btPause.GestureRecognizers.Add (tapPause);
 
-			var tapPlay = new TapGestureRecognizer ();
-			tapPlay.Tapped += (s, e) => {
+			var tapMute = new TapGestureRecognizer ();
+			tapMute.Tapped += (s, e) => {
+				if (Global.ForBinding.UnMute)
+					Global.ForBinding.UnMute = false;
+				else
+					Global.ForBinding.UnMute = true;
 			};
-			btPlay.GestureRecognizers.Add (tapPlay);
+			btMute.GestureRecognizers.Add (tapMute);
 
 			var tapVolumeDown = new TapGestureRecognizer ();
 			tapVolumeDown.Tapped += (s, e) => {

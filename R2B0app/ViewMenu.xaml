@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewMenu"
-	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White">
+	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White" BindingContext="{x:Static local:Global.ForBinding}">
 	<ContentView.Content>
 		<StackLayout Orientation="Vertical">
 			<StackLayout Orientation="Horizontal" Margin="6,6,0,0">
-				<Frame x:Name="btStop" Padding="6" WidthRequest="16">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Stop}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				<Frame x:Name="btStop" Padding="6">
+					<local:FontAwesomeIcon WidthRequest="18" Text="{x:Static local:FAIcon.Stop}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 				</Frame>
-				<Frame x:Name="btPause" Padding="6" WidthRequest="16">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Pause}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				<Frame x:Name="btPause" Padding="6">
+					<local:FontAwesomeIcon WidthRequest="18" Text="{Binding PlayPause}" TextColor="{Binding ColorPlaying}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 				</Frame>
-				<Frame x:Name="btPlay" Padding="6" WidthRequest="16">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Play}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				<Frame x:Name="btMute" Padding="6">
+					<local:FontAwesomeIcon WidthRequest="18" Text="{x:Static local:FAIcon.VolumeOff}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 				</Frame>
-				<Frame x:Name="btVolumeDown" Padding="6" WidthRequest="16">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeDown}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				<Frame x:Name="btVolumeDown" Padding="6">
+					<local:FontAwesomeIcon WidthRequest="18" Text="{x:Static local:FAIcon.VolumeDown}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 				</Frame>
-				<Frame x:Name="btVolumeUp" Padding="6" WidthRequest="16">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.VolumeUp}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+				<Frame x:Name="btVolumeUp" Padding="6">
+					<local:FontAwesomeIcon WidthRequest="18" Text="{x:Static local:FAIcon.VolumeUp}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
 				</Frame>
 				<!--
 				<Frame Padding="6">

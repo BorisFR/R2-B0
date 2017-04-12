@@ -21,6 +21,16 @@ namespace R2B0app
 		public static int FrequenceBruitage = 10;
 		public static bool RandomBruitage = true;
 
+		public static bool IsPlaying = false;
+		public static bool IsStop = true;
+
+		public static bool Disco = false;
+		public static bool BallOpen = false;
+		public static bool BallTurn = false;
+		public static bool PiePanelsOpen = false;
+		public static bool PiePanelLight = false;
+		public static bool SyncLights = false;
+
 		public static string IpAddress = "192.168.4.1";
 
 		public static R2B0appPage MainPage;
@@ -42,6 +52,7 @@ namespace R2B0app
 			AllMenu.Add (new TestObj ("Movie", FAIcon.Film, Screen.SeriesTV));
 			AllMenu.Add (new TestObj ("Music", FAIcon.Music, Screen.Musique));
 			AllMenu.Add (new TestObj ("Settings", FAIcon.Cogs, Screen.Settings));
+			AllMenu.Add (new TestObj ("Disco", FAIcon.Ball, Screen.Disco));
 
 			R2sounds.Add (new AudioObj ("Alarm (11)", 0));
 			R2sounds.Add (new AudioObj ("Hum (25)", 1));

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewDisco"
+	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White" BindingContext="{x:Static local:Global.ForBinding}">
+	<ContentView.Content>
+		<ScrollView Orientation="Vertical" Margin="0" Padding="0">
+			<StackLayout Orientation="Vertical" Spacing="0" Margin="0" Padding="0">
+				<local:UcTitle Text="Disco" Icon="{x:Static local:FAIcon.Ball}" />
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Ball}" VerticalTextAlignment="Center"/>
+					<Label Text="Disco ball out" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding BallOpen}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Repeat}" VerticalTextAlignment="Center"/>
+					<Label Text="Disco ball rotation" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding BallTurn}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.ChevronDown}" VerticalTextAlignment="Center"/>
+					<Label Text="Panels open" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding PiePanelsOpen}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Spotlights on" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding PiePanelLight}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Sync all lights" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding SyncLights}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<local:UcTitle Text="Animation" Icon="{x:Static local:FAIcon.Ball}" />
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Ball}" VerticalTextAlignment="Center"/>
+					<Label Text="All" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding Disco}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+	</ContentView.Content>
+</ContentView>

@@ -75,6 +75,30 @@ namespace R2B0app
 			case R2Command.PlaySerieSound:
 				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 
+			case R2Command.DiscoOff:
+				action = "D"; break;
+			case R2Command.DiscoOn:
+				action = "D"; p1 = "1"; break;
+			case R2Command.BallIn:
+				action = "D"; p1 = "2"; break;
+			case R2Command.BallOut:
+				action = "D"; p1 = "3"; break;
+			case R2Command.BallRotateOff:
+				action = "D"; p1 = "4"; break;
+			case R2Command.BallRotateOn:
+				action = "D"; p1 = "5"; break;
+			case R2Command.PiePanelsClose:
+				action = "D"; p1 = "6"; break;
+			case R2Command.PiePanelsOpen:
+				action = "D"; p1 = "7"; break;
+			case R2Command.PiePanelsLightOff:
+				action = "D"; p1 = "8"; break;
+			case R2Command.PiePanelsLightOn:
+				action = "D"; p1 = "9"; break;
+			case R2Command.SyncLightsOff:
+				action = "D"; p1 = "10"; break;
+			case R2Command.SyncLightsOn:
+				action = "D"; p1 = "11"; break;
 
 			}
 			SendCommand ($"command?action={action}&p1={p1}&p2={p2}");

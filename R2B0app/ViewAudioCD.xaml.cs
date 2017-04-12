@@ -32,13 +32,9 @@ namespace R2B0app
 			AudioObj param = (AudioObj)button.CommandParameter;
 			switch (display) {
 			case Screen.Musique:
+				Global.ForBinding.IsPlaying = true;
 				Communication.SendCommand (R2Command.PlaySerieSound, param.IdAudio, param.IdBank);
 				break;
-			default:
-				Communication.SendCommand (R2Command.PlayR2Sound, param.IdAudio);
-				break;
-
-
 			}
 		}
 

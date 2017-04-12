@@ -22,10 +22,6 @@ namespace R2B0app
 			case Screen.SeriesTV:
 				theList.ItemsSource = Global.SeriesSounds;
 				break;
-			case Screen.Musique:
-				theList.ItemsSource = Global.MusiqueSounds;
-				break;
-
 			}
 		}
 
@@ -35,12 +31,9 @@ namespace R2B0app
 			AudioObj param = (AudioObj)button.CommandParameter;
 			switch (display) {
 			case Screen.SeriesTV:
+				Global.ForBinding.IsPlaying = true;
 				Communication.SendCommand (R2Command.PlaySerieSound, param.IdAudio, param.IdBank);
 				break;
-			default:
-				Communication.SendCommand (R2Command.PlayR2Sound, param.IdAudio);
-				break;
-
 			}
 		}
 

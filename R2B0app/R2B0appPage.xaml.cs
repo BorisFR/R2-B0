@@ -32,6 +32,9 @@ namespace R2B0app
 			case Screen.Musique:
 				viewRight.Content = new ViewAudioCD (obj.Display);
 				break;
+			case Screen.Disco:
+				viewRight.Content = new ViewDisco ();
+				break;
 			}
 		}
 

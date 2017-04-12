@@ -22,12 +22,6 @@ namespace R2B0app
 			case Screen.StarWars:
 				theList.ItemsSource = Global.StarWarsSounds;
 				break;
-			case Screen.SeriesTV:
-				theList.ItemsSource = Global.SeriesSounds;
-				break;
-			case Screen.Musique:
-				theList.ItemsSource = Global.MusiqueSounds;
-				break;
 			}
 		}
 
@@ -37,13 +31,8 @@ namespace R2B0app
 			AudioObj param = (AudioObj)button.CommandParameter;
 			switch (display) {
 			case Screen.StarWars:
+				Global.ForBinding.IsPlaying = true;
 				Communication.SendCommand (R2Command.PlayStarWarsSound, param.IdAudio, param.IdBank);
-				break;
-			case Screen.SeriesTV:
-				Communication.SendCommand (R2Command.PlaySerieSound, param.IdAudio, param.IdBank);
-				break;
-			default:
-				Communication.SendCommand (R2Command.PlayR2Sound, param.IdAudio);
 				break;
 			}
 		}

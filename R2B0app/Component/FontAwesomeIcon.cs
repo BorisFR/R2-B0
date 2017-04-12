@@ -404,6 +404,7 @@ namespace R2B0app
 		public static string HourglassStart = "\uf251";
 		public static string HourglassEnd = "\uf253";
 
+		public static string Ball = "\uf1e3";
 
 	}
 

@@ -121,6 +121,9 @@
     <EmbeddedResource Include="Images\cd_u2_newyearsday.png" />
     <EmbeddedResource Include="Images\cd_u2_withorwithoutyou.png" />
     <EmbeddedResource Include="Images\cd_underdogproject_summerjam2003.png" />
+    <EmbeddedResource Include="ViewDisco.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -161,6 +164,9 @@
     <Compile Include="Component\ImageResourceExtension.cs" />
     <Compile Include="ViewAudioCD.xaml.cs">
       <DependentUpon>ViewAudioCD.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDisco.xaml.cs">
+      <DependentUpon>ViewDisco.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

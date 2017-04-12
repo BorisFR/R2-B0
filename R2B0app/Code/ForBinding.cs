@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
 
 namespace R2B0app
 {
@@ -68,8 +69,157 @@ namespace R2B0app
 			}
 		}
 
+		public Color ColorPlaying {
+			get {
+				if (Global.IsStop)
+					return Color.Gray;
+				return Color.Black;
+			}
+		}
+
+		public bool IsStop {
+			get { return Global.IsStop; }
+			set {
+				if (Global.IsStop == value) return;
+				Global.IsStop = value;
+				if (Global.IsStop)
+					IsPlaying = false;
+				OnPropertyChanged ("IsStop");
+				OnPropertyChanged ("ColorPlaying");
+			}
+		}
+
+		public string PlayPause {
+			get {
+				if (Global.IsPlaying)
+					return FAIcon.Pause;
+				return FAIcon.Play;
+			}
+		}
+
+		public bool IsPlaying {
+			get { return Global.IsPlaying; }
+			set {
+				if (Global.IsPlaying == value) return;
+				Global.IsPlaying = value;
+				if (Global.IsPlaying)
+					IsStop = false;
+				OnPropertyChanged ("IsPlaying");
+				OnPropertyChanged ("PlayPause");
+			}
+		}
 
 
+
+		public bool BallOpen {
+			get { return Global.BallOpen; }
+			set {
+				if (Global.BallOpen == value) return;
+				Global.BallOpen = value;
+				if (Global.BallOpen)
+					Communication.SendCommand (R2Command.BallOut);
+				else
+					Communication.SendCommand (R2Command.BallIn);
+				OnPropertyChanged ("BallOpen");
+				CheckDisco ();
+			}
+		}
+
+		public bool BallTurn {
+			get { return Global.BallTurn; }
+			set {
+				if (Global.BallTurn == value) return;
+				Global.BallTurn = value;
+				if (Global.BallTurn)
+					Communication.SendCommand (R2Command.BallRotateOn);
+				else
+					Communication.SendCommand (R2Command.BallRotateOff);
+				OnPropertyChanged ("BallTurn");
+				CheckDisco ();
+			}
+		}
+
+		public bool PiePanelsOpen {
+			get { return Global.PiePanelsOpen; }
+			set {
+				if (Global.PiePanelsOpen == value) return;
+				Global.PiePanelsOpen = value;
+				if (Global.PiePanelsOpen)
+					Communication.SendCommand (R2Command.PiePanelsOpen);
+				else
+					Communication.SendCommand (R2Command.PiePanelsClose);
+				OnPropertyChanged ("PiePanelsOpen");
+				CheckDisco ();
+			}
+		}
+
+		public bool PiePanelLight {
+			get { return Global.PiePanelLight; }
+			set {
+				if (Global.PiePanelLight == value) return;
+				Global.PiePanelLight = value;
+				if (Global.PiePanelLight)
+					Communication.SendCommand (R2Command.PiePanelsLightOn);
+				else
+					Communication.SendCommand (R2Command.PiePanelsLightOff);
+				OnPropertyChanged ("PiePanelLight");
+				CheckDisco ();
+			}
+		}
+
+		public bool SyncLights {
+			get { return Global.SyncLights; }
+			set {
+				if (Global.SyncLights == value) return;
+				Global.SyncLights = value;
+				if (Global.SyncLights)
+					Communication.SendCommand (R2Command.SyncLightsOn);
+				else
+					Communication.SendCommand (R2Command.SyncLightsOff);
+				OnPropertyChanged ("SyncLights");
+				CheckDisco ();
+			}
+		}
+
+
+		private void CheckDisco ()
+		{
+			if (Global.BallOpen && Global.BallTurn && Global.PiePanelsOpen && Global.PiePanelLight && Global.SyncLights) {
+				if (!Global.Disco) {
+					Global.Disco = true;
+					OnPropertyChanged ("Disco");
+				}
+			}
+			if (!Global.BallOpen || !Global.BallTurn || !Global.PiePanelsOpen || !Global.PiePanelLight || !Global.SyncLights) {
+				if (Global.Disco) {
+					Global.Disco = false;
+					OnPropertyChanged ("Disco");
+				}
+			}
+		}
+
+		public bool Disco {
+			get { return Global.Disco; }
+			set {
+				if (Global.Disco == value) return;
+				Global.Disco = value;
+				if (Global.Disco)
+					Communication.SendCommand (R2Command.DiscoOn);
+				else
+					Communication.SendCommand (R2Command.DiscoOff);
+				Global.BallOpen = value;
+				Global.BallTurn = value;
+				Global.PiePanelsOpen = value;
+				Global.PiePanelLight = value;
+				Global.SyncLights = value;
+				OnPropertyChanged ("BallOpen");
+				OnPropertyChanged ("BallTurn");
+				OnPropertyChanged ("PiePanelsOpen");
+				OnPropertyChanged ("PiePanelLight");
+				OnPropertyChanged ("SyncLights");
+				OnPropertyChanged ("Disco");
+			}
+		}
 
 
 

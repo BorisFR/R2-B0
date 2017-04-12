@@ -17,7 +17,19 @@ namespace R2B0app
 		PlayR2Sound,
 		PlayStarWarsSound,
 		PlayMusicSound,
-		PlaySerieSound
+		PlaySerieSound,
+		BallOut,
+		BallIn,
+		BallRotateOn,
+		BallRotateOff,
+		PiePanelsOpen,
+		PiePanelsClose,
+		PiePanelsLightOn,
+		PiePanelsLightOff,
+		SyncLightsOn,
+		SyncLightsOff,
+		DiscoOn,
+		DiscoOff
 	}
 
 
@@ -28,7 +40,8 @@ namespace R2B0app
 		R2Sound,
 		StarWars,
 		SeriesTV,
-		Musique
+		Musique,
+		Disco
 	}
 
 }
