@@ -29,7 +29,14 @@ namespace R2B0app
 		public static bool BallTurn = false;
 		public static bool PiePanelsOpen = false;
 		public static bool PiePanelLight = false;
-		public static bool SyncLights = false;
+		public static bool SyncLights = true;
+
+		public static bool LightPSI = true;
+		public static bool LightLD = true;
+		public static bool LightHPs = true;
+		public static bool LightMagic = true;
+		public static bool LightLDP = true;
+
 
 		public static string IpAddress = "192.168.4.1";
 

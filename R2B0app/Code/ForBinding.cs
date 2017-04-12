@@ -211,15 +211,89 @@ namespace R2B0app
 				Global.BallTurn = value;
 				Global.PiePanelsOpen = value;
 				Global.PiePanelLight = value;
-				Global.SyncLights = value;
+				if (value) {
+					Global.SyncLights = value;
+					OnPropertyChanged ("SyncLights");
+				}
 				OnPropertyChanged ("BallOpen");
 				OnPropertyChanged ("BallTurn");
 				OnPropertyChanged ("PiePanelsOpen");
 				OnPropertyChanged ("PiePanelLight");
-				OnPropertyChanged ("SyncLights");
 				OnPropertyChanged ("Disco");
 			}
 		}
+
+
+
+		public bool LightPSI {
+			get { return Global.LightPSI; }
+			set {
+				if (Global.LightPSI == value) return;
+				Global.LightPSI = value;
+				if (Global.LightPSI)
+					Communication.SendCommand (R2Command.PsiOn);
+				else
+					Communication.SendCommand (R2Command.PsiOff);
+				OnPropertyChanged ("LightPSI");
+			}
+		}
+
+		public bool LightLD {
+			get { return Global.LightLD; }
+			set {
+				if (Global.LightLD == value) return;
+				Global.LightLD = value;
+				if (Global.LightLD)
+					Communication.SendCommand (R2Command.FRldOn);
+				else
+					Communication.SendCommand (R2Command.FRldOff);
+				OnPropertyChanged ("LightLD");
+			}
+		}
+
+		public bool LightHPs {
+			get { return Global.LightHPs; }
+			set {
+				if (Global.LightHPs == value) return;
+				Global.LightHPs = value;
+				if (Global.LightHPs)
+					Communication.SendCommand (R2Command.HpOn);
+				else
+					Communication.SendCommand (R2Command.HpOff);
+				OnPropertyChanged ("LightHPs");
+			}
+		}
+
+		public bool LightMagic {
+			get { return Global.LightMagic; }
+			set {
+				if (Global.LightMagic == value) return;
+				Global.LightMagic = value;
+				if (Global.LightMagic)
+					Communication.SendCommand (R2Command.MagicPanelOn);
+				else
+					Communication.SendCommand (R2Command.MagicPanelOff);
+				OnPropertyChanged ("LightMagic");
+			}
+		}
+
+		public bool LightLDP {
+			get { return Global.LightLDP; }
+			set {
+				if (Global.LightLDP == value) return;
+				Global.LightLDP = value;
+				if (Global.LightLDP)
+					Communication.SendCommand (R2Command.LdpOn);
+				else
+					Communication.SendCommand (R2Command.LdpOff);
+				OnPropertyChanged ("LightLDP");
+			}
+		}
+
+
+
+
+
 
 
 

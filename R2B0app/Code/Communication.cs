@@ -100,6 +100,28 @@ namespace R2B0app
 			case R2Command.SyncLightsOn:
 				action = "D"; p1 = "11"; break;
 
+			case R2Command.HpOff:
+				action = "D"; p1 = "12"; break;
+			case R2Command.HpOn:
+				action = "D"; p1 = "13"; break;
+			case R2Command.PsiOff:
+				action = "D"; p1 = "14"; break;
+			case R2Command.PsiOn:
+				action = "D"; p1 = "15"; break;
+			case R2Command.FRldOff:
+				action = "D"; p1 = "16"; break;
+			case R2Command.FRldOn:
+				action = "D"; p1 = "17"; break;
+			case R2Command.MagicPanelOff:
+				action = "D"; p1 = "18"; break;
+			case R2Command.MagicPanelOn:
+				action = "D"; p1 = "19"; break;
+			case R2Command.LdpOff:
+				action = "D"; p1 = "20"; break;
+			case R2Command.LdpOn:
+				action = "D"; p1 = "21"; break;
+
+
 			}
 			SendCommand ($"command?action={action}&p1={p1}&p2={p2}");
 		}

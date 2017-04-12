@@ -7,17 +7,22 @@
 				<local:UcTitle Text="Disco" Icon="{x:Static local:FAIcon.Ball}" />
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
 					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Ball}" VerticalTextAlignment="Center"/>
-					<Label Text="Disco ball out" VerticalTextAlignment="Center"/>
+					<Label Text="Disco mode activation" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding Disco}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Ball}" VerticalTextAlignment="Center"/>
+					<Label Text="Ball out" VerticalTextAlignment="Center"/>
 					<Switch IsToggled="{Binding BallOpen}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
 					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Repeat}" VerticalTextAlignment="Center"/>
-					<Label Text="Disco ball rotation" VerticalTextAlignment="Center"/>
+					<Label Text="Ball rotation" VerticalTextAlignment="Center"/>
 					<Switch IsToggled="{Binding BallTurn}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
 					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.ChevronDown}" VerticalTextAlignment="Center"/>
-					<Label Text="Panels open" VerticalTextAlignment="Center"/>
+					<Label Text="Pie Panels open" VerticalTextAlignment="Center"/>
 					<Switch IsToggled="{Binding PiePanelsOpen}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
@@ -25,16 +30,36 @@
 					<Label Text="Spotlights on" VerticalTextAlignment="Center"/>
 					<Switch IsToggled="{Binding PiePanelLight}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
+				<local:UcTitle Text="Other Lights" Icon="{x:Static local:FAIcon.LightbulbO}" />
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
 					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
-					<Label Text="Sync all lights" VerticalTextAlignment="Center"/>
+					<Label Text="Sync with Disco mode" VerticalTextAlignment="Center"/>
 					<Switch IsToggled="{Binding SyncLights}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
-				<local:UcTitle Text="Animation" Icon="{x:Static local:FAIcon.Ball}" />
 				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
-					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.Ball}" VerticalTextAlignment="Center"/>
-					<Label Text="All" VerticalTextAlignment="Center"/>
-					<Switch IsToggled="{Binding Disco}" HorizontalOptions="EndAndExpand"/>
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Front and Rear Logic Display" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding LightLD}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Front and Rear Process State Indicator" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding LightPSI}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Holo projectors" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding LightHPs}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Magic Display" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding LightMagic}" HorizontalOptions="EndAndExpand"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal" Margin="0" Padding="0" HorizontalOptions="FillAndExpand">
+					<local:FontAwesomeIcon Text="{x:Static local:FAIcon.LightbulbO}" VerticalTextAlignment="Center"/>
+					<Label Text="Large Data Port" VerticalTextAlignment="Center"/>
+					<Switch IsToggled="{Binding LightLDP}" HorizontalOptions="EndAndExpand"/>
 				</StackLayout>
 			</StackLayout>
 		</ScrollView>

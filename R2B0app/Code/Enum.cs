@@ -29,7 +29,17 @@ namespace R2B0app
 		SyncLightsOn,
 		SyncLightsOff,
 		DiscoOn,
-		DiscoOff
+		DiscoOff,
+		HpOn,
+		HpOff,
+		PsiOn,
+		PsiOff,
+		FRldOn,
+		FRldOff,
+		MagicPanelOn,
+		MagicPanelOff,
+		LdpOn,
+		LdpOff
 	}
 
 
