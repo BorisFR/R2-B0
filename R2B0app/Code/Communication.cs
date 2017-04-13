@@ -46,6 +46,8 @@ namespace R2B0app
 			string p1 = "0";
 			string p2 = "0";
 			switch (command) {
+
+			// S = gestion de la carte en elle-meme
 			case R2Command.AudioMuteOn:
 				action = "S"; p2 = "4"; break;
 			case R2Command.AudioMuteOff:
@@ -59,6 +61,7 @@ namespace R2B0app
 			case R2Command.VolumeSet:
 				action = "S"; p2 = "3"; p1 = var.ToString (); break;
 
+			// R = gestion du bruitage automatique de R2-D2
 			case R2Command.BruitageOff:
 				action = "R"; break;
 			case R2Command.BruitageOn:
@@ -66,15 +69,19 @@ namespace R2B0app
 			case R2Command.BruitageFrequence:
 				action = "R"; p1 = "2"; p2 = var.ToString (); break;
 
+			// A = gestion des bruitages de R2-D2
 			case R2Command.PlayR2Sound:
 				action = "A"; p2 = var.ToString (); break;
-			case R2Command.PlayStarWarsSound:
-				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 			case R2Command.PlayMusicSound:
 				action = "A"; p2 = var.ToString (); break;
+
+			// T = gestion de la musique
+			case R2Command.PlayStarWarsSound:
+				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 			case R2Command.PlaySerieSound:
 				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 
+			// D = gestion de la partie "boule à facettes"
 			case R2Command.DiscoOff:
 				action = "D"; break;
 			case R2Command.DiscoOn:
@@ -100,26 +107,29 @@ namespace R2B0app
 			case R2Command.SyncLightsOn:
 				action = "D"; p1 = "11"; break;
 
+			// H = gestion des lumières de la tête
 			case R2Command.HpOff:
-				action = "D"; p1 = "12"; break;
+				action = "H"; break;
 			case R2Command.HpOn:
-				action = "D"; p1 = "13"; break;
+				action = "H"; p1 = "1"; break;
 			case R2Command.PsiOff:
-				action = "D"; p1 = "14"; break;
+				action = "H"; p1 = "2"; break;
 			case R2Command.PsiOn:
-				action = "D"; p1 = "15"; break;
+				action = "H"; p1 = "3"; break;
 			case R2Command.FRldOff:
-				action = "D"; p1 = "16"; break;
+				action = "H"; p1 = "4"; break;
 			case R2Command.FRldOn:
-				action = "D"; p1 = "17"; break;
+				action = "H"; p1 = "5"; break;
 			case R2Command.MagicPanelOff:
-				action = "D"; p1 = "18"; break;
+				action = "H"; p1 = "6"; break;
 			case R2Command.MagicPanelOn:
-				action = "D"; p1 = "19"; break;
+				action = "H"; p1 = "7"; break;
+
+			// F = gestion des trucs du Frame
 			case R2Command.LdpOff:
-				action = "D"; p1 = "20"; break;
+				action = "F"; break;
 			case R2Command.LdpOn:
-				action = "D"; p1 = "21"; break;
+				action = "F"; p1 = "1"; break;
 
 
 			}
