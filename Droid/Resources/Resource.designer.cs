@@ -26,9 +26,9 @@ namespace R2B0app.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::R2B0app.Droid.Resource.Attribute.actionBarSize;
 			global::Plugin.Vibrate.Resource.String.ApplicationName = global::R2B0app.Droid.Resource.String.ApplicationName;
 			global::Plugin.Vibrate.Resource.String.Hello = global::R2B0app.Droid.Resource.String.Hello;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::R2B0app.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
