@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2B0app.ViewPanel"
+	xmlns:local="clr-namespace:R2B0app" BackgroundColor="White" BindingContext="{x:Static local:Global.ForBinding}">
+	<ContentView.Content>
+		<ScrollView Orientation="Vertical" Margin="0" Padding="0">
+			<StackLayout Orientation="Vertical" Spacing="0" Margin="0" Padding="0">
+				<local:UcTitle Text="Panels" Icon="{x:Static local:FAIcon.Ball}" />
+				<local:AwesomeWrappanel x:Name="theList" Orientation="Horizontal" Spacing="2">
+					<local:AwesomeWrappanel.ItemTemplate>
+						<DataTemplate>
+							<Button WidthRequest="115" Text="{Binding Title}" TextColor="#236BFD" CommandParameter="{Binding}" Clicked="ButtonClicked" BorderWidth="1" BorderColor="Black" />
+						</DataTemplate>
+					</local:AwesomeWrappanel.ItemTemplate>
+				</local:AwesomeWrappanel>
+			</StackLayout>
+		</ScrollView>
+	</ContentView.Content>
+</ContentView>

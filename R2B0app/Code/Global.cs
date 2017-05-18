@@ -50,6 +50,9 @@ namespace R2B0app
 		public static ObservableCollection<AudioObj> SeriesSounds = new ObservableCollection<AudioObj> ();
 		public static ObservableCollection<AudioObj> MusiqueSounds = new ObservableCollection<AudioObj> ();
 
+		public static ObservableCollection<AudioObj> R2panels = new ObservableCollection<AudioObj> ();
+		public static ObservableCollection<AudioObj> R2lights = new ObservableCollection<AudioObj> ();
+
 		public static void Init ()
 		{
 			Vibrate = CrossVibrate.Current;
@@ -58,6 +61,8 @@ namespace R2B0app
 			AllMenu.Add (new TestObj ("Star Wars", FAIcon.Rebel, Screen.StarWars));
 			AllMenu.Add (new TestObj ("Movie", FAIcon.Film, Screen.SeriesTV));
 			AllMenu.Add (new TestObj ("Music", FAIcon.Music, Screen.Musique));
+			AllMenu.Add (new TestObj ("Panels", FAIcon.Ball, Screen.Panels));
+			AllMenu.Add (new TestObj ("Lights", FAIcon.LightbulbO, Screen.Lights));
 			AllMenu.Add (new TestObj ("Settings", FAIcon.Cogs, Screen.Settings));
 			AllMenu.Add (new TestObj ("Disco", FAIcon.Ball, Screen.Disco));
 
@@ -89,6 +94,7 @@ namespace R2B0app
 			StarWarsSounds.Add (new AudioObj ("Battle of the Heroes", FAIcon.Empire, 5, 52));
 			StarWarsSounds.Add (new AudioObj ("La Cantina", FAIcon.Rebel, 5, 53));
 			StarWarsSounds.Add (new AudioObj ("Message de Leia", FAIcon.Rebel, 9, 97));
+			StarWarsSounds.Add (new AudioObj ("Vador Breath", FAIcon.Rebel, 5, 54));
 
 			StarWarsSounds.Add (new AudioObj ("Birthday", FAIcon.Empire, 5, 1));
 			StarWarsSounds.Add (new AudioObj ("Gangnam Style", FAIcon.Empire, 5, 2));
@@ -177,7 +183,33 @@ namespace R2B0app
 			MusiqueSounds.Add (new AudioObj ("Paul Oakenfold", "cd_housenation", 7, 24));
 			MusiqueSounds.Add (new AudioObj ("Push", "cd_push_universalnation", 7, 26));
 
+			R2panels.Add (new AudioObj ("Open", R2Command.PlayPanel, 11));
+			R2panels.Add (new AudioObj ("Close", R2Command.PlayPanel, 12));
+			R2panels.Add (new AudioObj ("Open from Left", R2Command.PlayPanel, 1));
+			R2panels.Add (new AudioObj ("Open from Right", R2Command.PlayPanel, 2));
+			R2panels.Add (new AudioObj ("Close from Left", R2Command.PlayPanel, 3));
+			R2panels.Add (new AudioObj ("Close from Right", R2Command.PlayPanel, 4));
+			R2panels.Add (new AudioObj ("Open & Close Left", R2Command.PlayPanel, 7));
+			R2panels.Add (new AudioObj ("Open & Close Right", R2Command.PlayPanel, 8));
+			R2panels.Add (new AudioObj ("Wave Left", R2Command.PlayPanel, 5));
+			R2panels.Add (new AudioObj ("Wave Right", R2Command.PlayPanel, 6));
+			R2panels.Add (new AudioObj ("Ola Left", R2Command.PlayPanel, 13));
+			R2panels.Add (new AudioObj ("Ola Right", R2Command.PlayPanel, 14));
+			R2panels.Add (new AudioObj ("Ripple Left", R2Command.PlayPanel, 15));
+			R2panels.Add (new AudioObj ("Ripple Right", R2Command.PlayPanel, 16));
+			R2panels.Add (new AudioObj ("FlipFlap", R2Command.PlayPanel, 9));
+			R2panels.Add (new AudioObj ("FlipFlap & Close", R2Command.PlayPanel, 10));
+			R2panels.Add (new AudioObj ("Vador Breath", R2Command.PlayPanel, 17));
 
+			R2lights.Add (new AudioObj ("OFF", R2Command.PlayLight, 0));
+			R2lights.Add (new AudioObj ("Standard", R2Command.PlayLight, 1));
+			R2lights.Add (new AudioObj ("Cylon", R2Command.PlayLight, 2));
+			R2lights.Add (new AudioObj ("Rainbow", R2Command.PlayLight, 3));
+			R2lights.Add (new AudioObj ("Flash", R2Command.PlayLight, 4));
+			R2lights.Add (new AudioObj ("Strobe", R2Command.PlayLight, 5));
+			R2lights.Add (new AudioObj ("Equalizer", R2Command.PlayLight, 6));
+			R2lights.Add (new AudioObj ("Police", R2Command.PlayLight, 7));
+			R2lights.Add (new AudioObj ("Vador Breath +PP", R2Command.PlayLight, 8));
 
 		}
 

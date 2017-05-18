@@ -20,6 +20,10 @@ namespace R2B0app
 		private int idBank;
 		public int IdBank { get { return idBank; } set { if (idBank == value) return; idBank = value; OnPropertyChanged ("IdBank"); } }
 
+		private R2Command command;
+		public R2Command Command { get { return command; } set { if (command == value) return; command = value; OnPropertyChanged ("Command"); } }
+
+
 		public ImageSource Picture {
 			get {
 				try {
@@ -38,6 +42,7 @@ namespace R2B0app
 		public AudioObj (string title, int idAudio) { Title = title; IdAudio = idAudio; }
 		public AudioObj (string title, string icon, int idAudio) { Title = title; Icon = icon; IdAudio = idAudio; }
 		public AudioObj (string title, string icon, int idAudio, int idBank) { Title = title; Icon = icon; IdAudio = idAudio; IdBank = idBank; }
+		public AudioObj (string title, R2Command command, int id) { Title = title; Command = command; IdAudio = id; }
 
 		protected virtual void OnPropertyChanged (string propertyName)
 		{

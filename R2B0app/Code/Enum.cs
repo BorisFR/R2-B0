@@ -22,6 +22,8 @@ namespace R2B0app
 		BallIn,
 		BallRotateOn,
 		BallRotateOff,
+		PlayPanel,
+		PlayLight,
 		PiePanelsOpen,
 		PiePanelsClose,
 		PiePanelsLightOn,
@@ -51,7 +53,9 @@ namespace R2B0app
 		StarWars,
 		SeriesTV,
 		Musique,
-		Disco
+		Disco,
+		Panels,
+		Lights
 	}
 
 }

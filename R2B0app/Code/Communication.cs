@@ -81,6 +81,14 @@ namespace R2B0app
 			case R2Command.PlaySerieSound:
 				action = "T"; p1 = var.ToString (); p2 = var2.ToString (); break;
 
+			// P = Panels
+			case R2Command.PlayPanel:
+				action = "P"; p1 = var.ToString (); break;
+
+			// M = Lights
+			case R2Command.PlayLight:
+				action = "M"; p1 = var.ToString (); break;
+
 			// D = gestion de la partie "boule à facettes"
 			case R2Command.DiscoOff:
 				action = "D"; break;
