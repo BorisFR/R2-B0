@@ -102,8 +102,12 @@ namespace R2B0app
 			set {
 				if (Global.IsPlaying == value) return;
 				Global.IsPlaying = value;
-				if (Global.IsPlaying)
+				if (Global.IsPlaying) {
 					IsStop = false;
+					Communication.SendCommand (R2Command.MusicPause);
+				} else {
+					Communication.SendCommand (R2Command.MusicResume);
+				}
 				OnPropertyChanged ("IsPlaying");
 				OnPropertyChanged ("PlayPause");
 			}

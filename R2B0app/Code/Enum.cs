@@ -18,6 +18,8 @@ namespace R2B0app
 		PlayStarWarsSound,
 		PlayMusicSound,
 		PlaySerieSound,
+		MusicPause,
+		MusicResume,
 		BallOut,
 		BallIn,
 		BallRotateOn,

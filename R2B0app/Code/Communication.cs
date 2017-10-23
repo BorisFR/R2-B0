@@ -60,6 +60,10 @@ namespace R2B0app
 				action = "S"; p2 = "1"; break;
 			case R2Command.VolumeSet:
 				action = "S"; p2 = "3"; p1 = var.ToString (); break;
+			case R2Command.MusicPause:
+				action = "S"; p2 = "6"; break;
+			case R2Command.MusicResume:
+				action = "S"; p2 = "7"; break;
 
 			// R = gestion du bruitage automatique de R2-D2
 			case R2Command.BruitageOff:
